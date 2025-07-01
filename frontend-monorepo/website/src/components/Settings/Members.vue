@@ -113,11 +113,11 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { createResource, Avatar, Button, FormControl, Badge } from '@mono/frappe-ui'
+import { createResource, Avatar, Button, FormControl, Badge } from '@mono/mono-frappe-ui'
 import { useRouter } from 'vue-router'
 import { ref, watch, reactive, inject } from 'vue'
 import { RefreshCw, Plus, X } from 'lucide-vue-next'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 import type { User } from '@/components/Settings/types'
 
 const router = useRouter()

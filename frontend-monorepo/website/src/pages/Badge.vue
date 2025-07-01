@@ -24,7 +24,7 @@
 	</div>
 </template>
 <script setup>
-import { createResource, usePageMeta } from '@mono/frappe-ui'
+import { createResource, usePageMeta } from '@mono/mono-frappe-ui'
 import { computed, inject } from 'vue'
 import { sessionStore } from '../stores/session'
 

@@ -139,7 +139,7 @@ import {
 	Breadcrumbs,
 	createResource,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { inject, ref } from 'vue'
 import { sessionStore } from '../stores/session'
 import JobApplicationModal from '@/components/Modals/JobApplicationModal.vue'

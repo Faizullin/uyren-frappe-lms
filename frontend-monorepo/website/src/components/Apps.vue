@@ -36,7 +36,7 @@
 	</Popover>
 </template>
 <script setup>
-import { Popover, createResource } from '@mono/frappe-ui'
+import { Popover, createResource } from '@mono/mono-frappe-ui'
 import { LayoutGrid, ChevronRight } from 'lucide-vue-next'
 
 const apps = createResource({

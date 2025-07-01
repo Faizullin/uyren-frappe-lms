@@ -93,7 +93,7 @@
 	</div>
 </template>
 <script setup>
-import { createResource, TextEditor, Button, Dropdown, toast } from '@mono/frappe-ui'
+import { createResource, TextEditor, Button, Dropdown, toast } from '@mono/mono-frappe-ui'
 import { timeAgo } from '@/utils'
 import UserAvatar from '@/components/UserAvatar.vue'
 import { ChevronLeft, MoreHorizontal } from 'lucide-vue-next'

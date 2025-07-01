@@ -94,7 +94,7 @@ import {
 	createResource,
 	TextEditor,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { reactive, watch } from 'vue'
 import { FileText, X } from 'lucide-vue-next'
 import { getFileSize } from '@/utils'

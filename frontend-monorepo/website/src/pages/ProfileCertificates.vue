@@ -22,7 +22,7 @@
 	</div>
 </template>
 <script setup>
-import { createListResource } from '@mono/frappe-ui'
+import { createListResource } from '@mono/mono-frappe-ui'
 import { inject, onMounted } from 'vue'
 
 const dayjs = inject('$dayjs')

@@ -315,11 +315,11 @@ import {
 	createResource,
 	usePageMeta,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { useRouter } from 'vue-router'
 import { Image } from 'lucide-vue-next'
 import { capture } from '@/telemetry'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 import { sessionStore } from '../stores/session'
 import MultiSelect from '@/components/Controls/MultiSelect.vue'
 import Link from '@/components/Controls/Link.vue'

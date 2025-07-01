@@ -31,8 +31,8 @@ import ace from 'ace-builds'
 import 'ace-builds/src-min-noconflict/ext-searchbox'
 import 'ace-builds/src-min-noconflict/theme-chrome'
 import 'ace-builds/src-min-noconflict/theme-twilight'
-import { PropType, onMounted, ref, watch } from 'vue'
-import { Button } from '@mono/frappe-ui'
+import { type PropType, onMounted, ref, watch } from 'vue'
+import { Button } from '@mono/mono-frappe-ui'
 
 const isDark = ref(false)
 

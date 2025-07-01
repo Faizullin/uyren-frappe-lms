@@ -74,7 +74,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { Button } from '@mono/frappe-ui'
+import { Button } from '@mono/mono-frappe-ui'
 import { Ellipsis, Plus, Trash2 } from 'lucide-vue-next'
 import { onClickOutside } from '@vueuse/core'
 

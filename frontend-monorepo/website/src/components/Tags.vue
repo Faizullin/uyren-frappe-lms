@@ -20,7 +20,7 @@
 	</div>
 </template>
 <script setup>
-import { FormControl } from '@mono/frappe-ui'
+import { FormControl } from '@mono/mono-frappe-ui'
 import { X } from 'lucide-vue-next'
 import { ref } from 'vue'
 

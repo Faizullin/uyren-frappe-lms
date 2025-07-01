@@ -149,7 +149,7 @@ import {
 	ListSelectBanner,
 	usePageMeta,
 	toast,
-} from 'frappe-ui'
+} from '@mono/mono-frappe-ui'
 import type {
 	ProgrammingExerciseSubmission,
 	Filters,

@@ -111,7 +111,7 @@
 	</div>
 </template>
 <script setup>
-import { FormControl, FileUploader, Button, Switch } from '@mono/frappe-ui'
+import { FormControl, FileUploader, Button, Switch } from '@mono/mono-frappe-ui'
 import { computed } from 'vue'
 import { getFileSize, validateFile } from '@/utils'
 import { X } from 'lucide-vue-next'

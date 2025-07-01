@@ -113,7 +113,7 @@ import {
 	FormControl,
 	usePageMeta,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref } from 'vue'
 import { Edit, Plus, LockKeyhole } from 'lucide-vue-next'
 import CourseCard from '@/components/CourseCard.vue'

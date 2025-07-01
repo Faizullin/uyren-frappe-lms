@@ -1,5 +1,5 @@
 import { watch } from 'vue'
-import { call, toast } from '@mono/frappe-ui'
+import { call, toast } from '@mono/mono-frappe-ui'
 import { useTimeAgo } from '@vueuse/core'
 import { Quiz } from '@/utils/quiz'
 import { Program } from '@/utils/program'

@@ -61,7 +61,7 @@
 	</Dialog>
 </template>
 <script setup lang="ts">
-import { call, Dialog, FormControl, toast } from '@mono/frappe-ui'
+import { call, Dialog, FormControl, toast } from '@mono/mono-frappe-ui'
 import { inject, reactive, watch } from 'vue'
 import { User } from '@/components/Settings/types'
 import { openSettings, cleanError } from '@/utils'

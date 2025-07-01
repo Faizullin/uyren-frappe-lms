@@ -30,7 +30,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, createResource, toast } from '@mono/frappe-ui'
+import { Dialog, createResource, toast } from '@mono/mono-frappe-ui'
 import Link from '@/components/Controls/Link.vue'
 import { reactive, watch } from 'vue'
 import IconPicker from '@/components/Controls/IconPicker.vue'

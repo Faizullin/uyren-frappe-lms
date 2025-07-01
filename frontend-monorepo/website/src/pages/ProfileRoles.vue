@@ -44,7 +44,7 @@
 	</div>
 </template>
 <script setup>
-import { FormControl, createResource, toast } from '@mono/frappe-ui'
+import { FormControl, createResource, toast } from '@mono/mono-frappe-ui'
 import { ref } from 'vue'
 import { convertToTitleCase } from '@/utils'
 import { CircleAlert } from 'lucide-vue-next'

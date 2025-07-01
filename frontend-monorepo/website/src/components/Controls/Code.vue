@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref, computed, watch } from 'vue'
-import { Button } from '@mono/frappe-ui'
+import { Button } from '@mono/mono-frappe-ui'
 import { Codemirror } from 'vue-codemirror'
 import { autocompletion, closeBrackets } from '@codemirror/autocomplete'
 import { LanguageSupport } from '@codemirror/language'

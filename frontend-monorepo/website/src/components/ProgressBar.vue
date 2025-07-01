@@ -12,7 +12,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { Tooltip } from '@mono/frappe-ui'
+import { Tooltip } from '@mono/mono-frappe-ui'
 
 const props = defineProps({
 	progress: {

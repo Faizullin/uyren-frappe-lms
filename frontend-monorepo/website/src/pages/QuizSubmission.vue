@@ -81,7 +81,7 @@ import {
 	Badge,
 	usePageMeta,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, onBeforeUnmount, onMounted, inject } from 'vue'
 import { useRouter } from 'vue-router'
 import { sessionStore } from '@/stores/session'

@@ -183,7 +183,7 @@ import {
 	ListRowItem,
 	NumberChart,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import {
 	BookOpen,
 	GraduationCap,

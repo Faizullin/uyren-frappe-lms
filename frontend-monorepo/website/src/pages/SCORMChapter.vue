@@ -40,7 +40,7 @@ import {
 	createListResource,
 	createResource,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, onBeforeMount, ref } from 'vue'
 import { useSidebar } from '@/stores/sidebar'
 import { sessionStore } from '../stores/session'

@@ -27,7 +27,7 @@
 	</Dialog>
 </template>
 <script setup lang="ts">
-import { Dialog } from '@mono/frappe-ui'
+import { Dialog } from '@mono/mono-frappe-ui'
 import { onMounted, nextTick, ref } from 'vue'
 import Link from '@/components/Controls/Link.vue'
 

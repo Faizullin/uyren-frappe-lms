@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { createResource } from '@mono/frappe-ui'
+import { createResource } from '@mono/mono-frappe-ui'
 import { watch } from 'vue'
 import CourseCard from '@/components/CourseCard.vue'
 

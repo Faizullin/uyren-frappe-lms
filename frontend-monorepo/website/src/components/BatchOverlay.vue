@@ -122,7 +122,7 @@
 </template>
 <script setup>
 import { inject, computed } from 'vue'
-import { Badge, Button, createResource, toast } from '@mono/frappe-ui'
+import { Badge, Button, createResource, toast } from '@mono/mono-frappe-ui'
 import { BookOpen, Clock, Globe } from 'lucide-vue-next'
 import { formatNumberIntoCurrency, formatTime } from '@/utils'
 import DateRange from '@/components/Common/DateRange.vue'

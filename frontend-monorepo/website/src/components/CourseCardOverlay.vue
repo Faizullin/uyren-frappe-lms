@@ -146,7 +146,7 @@
 <script setup>
 import { BookOpen, Users, Star, GraduationCap } from 'lucide-vue-next'
 import { computed, inject } from 'vue'
-import { Badge, Button, call, createResource, toast } from '@mono/frappe-ui'
+import { Badge, Button, call, createResource, toast } from '@mono/mono-frappe-ui'
 import { formatAmount } from '@/utils/'
 import { capture } from '@/telemetry'
 import { useRouter } from 'vue-router'

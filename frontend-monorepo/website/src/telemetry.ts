@@ -1,5 +1,5 @@
 // import '../../../frappe/frappe/public/js/lib/posthog.js'
-import { createResource } from '@mono/frappe-ui'
+import { createResource } from '@mono/mono-frappe-ui'
 
 declare global {
   interface Window {

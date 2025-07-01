@@ -11,7 +11,7 @@
 	</Tooltip>
 </template>
 <script setup>
-import { Avatar, Tooltip } from '@mono/frappe-ui'
+import { Avatar, Tooltip } from '@mono/mono-frappe-ui'
 const props = defineProps({
 	user: {
 		type: Object,

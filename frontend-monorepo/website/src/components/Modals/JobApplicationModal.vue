@@ -64,7 +64,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, FileUploader, Button, createResource, toast } from '@mono/frappe-ui'
+import { Dialog, FileUploader, Button, createResource, toast } from '@mono/mono-frappe-ui'
 import { FileText } from 'lucide-vue-next'
 import { ref, inject } from 'vue'
 import { getFileSize } from '@/utils/'

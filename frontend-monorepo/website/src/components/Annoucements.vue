@@ -25,7 +25,7 @@
 	</div>
 </template>
 <script setup>
-import { createResource, Avatar } from '@mono/frappe-ui'
+import { createResource, Avatar } from '@mono/mono-frappe-ui'
 import { timeAgo } from '@/utils'
 
 const props = defineProps({

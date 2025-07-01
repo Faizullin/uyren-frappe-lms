@@ -87,7 +87,7 @@ import {
 	ListView,
 	ListRowItem,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { Plus, Trash2 } from 'lucide-vue-next'
 const readOnlyMode = window.read_only_mode
 

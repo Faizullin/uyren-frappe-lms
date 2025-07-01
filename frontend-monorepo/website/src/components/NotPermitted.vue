@@ -17,7 +17,7 @@
 	</div>
 </template>
 <script setup>
-import { Button } from '@mono/frappe-ui'
+import { Button } from '@mono/mono-frappe-ui'
 
 const props = defineProps({
 	title: {

@@ -53,7 +53,7 @@
 	</div>
 </template>
 <script setup>
-import { Button, createResource } from '@mono/frappe-ui'
+import { Button, createResource } from '@mono/mono-frappe-ui'
 import { inject } from 'vue'
 import { GraduationCap } from 'lucide-vue-next'
 

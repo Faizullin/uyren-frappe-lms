@@ -53,7 +53,7 @@ import {
 	ListHeader,
 	ListHeaderItem,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, onMounted, inject } from 'vue'
 import { sessionStore } from '../stores/session'
 import { useRouter } from 'vue-router'

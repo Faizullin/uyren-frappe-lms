@@ -56,7 +56,7 @@
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
-import { Dialog, Button, Checkbox, Tabs, Tab } from '@mono/frappe-ui'
+import { Dialog, Button, Checkbox, Tabs, Tab } from '@mono/mono-frappe-ui'
 import { Codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/javascript/javascript.js'

@@ -122,10 +122,10 @@ import {
 	Switch,
 	Button,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, watch, reactive, ref, inject } from 'vue'
 import Link from '@/components/Controls/Link.vue'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 
 const show = defineModel()
 const quiz = defineModel('quiz')

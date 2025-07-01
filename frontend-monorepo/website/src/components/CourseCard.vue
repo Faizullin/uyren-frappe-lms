@@ -122,7 +122,7 @@
 import { BookOpen, Users, Star } from 'lucide-vue-next'
 import UserAvatar from '@/components/UserAvatar.vue'
 import { sessionStore } from '@/stores/session'
-import { Badge, Tooltip } from '@mono/frappe-ui'
+import { Badge, Tooltip } from '@mono/mono-frappe-ui'
 import CourseInstructors from '@/components/CourseInstructors.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
 

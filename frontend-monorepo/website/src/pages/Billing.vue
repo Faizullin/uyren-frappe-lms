@@ -157,7 +157,7 @@ import {
 	Breadcrumbs,
 	usePageMeta,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { reactive, inject, onMounted, computed } from 'vue'
 import { sessionStore } from '../stores/session'
 import Link from '@/components/Controls/Link.vue'

@@ -192,7 +192,7 @@ import {
 	FormControl,
 	TextEditor,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { FileText, X } from 'lucide-vue-next'
 import { getFileSize } from '@/utils'

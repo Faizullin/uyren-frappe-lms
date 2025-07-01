@@ -64,7 +64,7 @@
 	</Dialog>
 </template>
 <script setup lang="ts">
-import { Button, Dialog, FormControl, TextEditor, toast } from '@mono/frappe-ui'
+import { Button, Dialog, FormControl, TextEditor, toast } from '@mono/mono-frappe-ui'
 import { computed, reactive, watch } from 'vue'
 
 const show = defineModel()

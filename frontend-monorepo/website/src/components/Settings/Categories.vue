@@ -90,7 +90,7 @@ import {
 	createListResource,
 	createResource,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { Plus, Trash2, X } from 'lucide-vue-next'
 import { ref } from 'vue'
 import { cleanError } from '@/utils'

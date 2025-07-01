@@ -9,7 +9,7 @@
 	</FrappeUIProvider>
 </template>
 <script setup>
-import { FrappeUIProvider } from '@mono/frappe-ui'
+import { FrappeUIProvider } from '@mono/mono-frappe-ui'
 import { Dialogs } from '@/utils/dialogs'
 import { computed, onUnmounted, ref, watch } from 'vue'
 import { useScreenSize } from './utils/composables'

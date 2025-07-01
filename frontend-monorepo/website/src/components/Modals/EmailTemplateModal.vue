@@ -75,7 +75,7 @@
 	</Dialog>
 </template>
 <script setup lang="ts">
-import { call, Dialog, FormControl, TextEditor, toast } from '@mono/frappe-ui'
+import { call, Dialog, FormControl, TextEditor, toast } from '@mono/mono-frappe-ui'
 import { reactive, watch } from 'vue'
 import { cleanError } from '@/utils'
 

@@ -70,7 +70,7 @@ import {
 	ListHeader,
 	ListHeaderItem,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { useRouter } from 'vue-router'
 import { computed, inject, onMounted, ref } from 'vue'
 import { Plus } from 'lucide-vue-next'

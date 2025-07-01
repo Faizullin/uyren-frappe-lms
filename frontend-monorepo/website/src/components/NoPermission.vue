@@ -32,7 +32,7 @@
 </template>
 <script setup>
 import { inject } from 'vue'
-import { Button } from '@mono/frappe-ui'
+import { Button } from '@mono/mono-frappe-ui'
 
 const user = inject('$user')
 

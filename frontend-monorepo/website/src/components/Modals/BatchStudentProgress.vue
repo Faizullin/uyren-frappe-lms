@@ -115,7 +115,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Avatar, Badge, Dialog } from '@mono/frappe-ui'
+import { Avatar, Badge, Dialog } from '@mono/mono-frappe-ui'
 import StudentHeatmap from '@/components/StudentHeatmap.vue'
 
 const show = defineModel()

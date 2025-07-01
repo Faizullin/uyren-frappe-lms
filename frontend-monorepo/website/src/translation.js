@@ -1,4 +1,4 @@
-import { createResource } from '@mono/frappe-ui'
+import { createResource } from '@mono/mono-frappe-ui'
 
 export default function translationPlugin(app) {
 	app.config.globalProperties.__ = translate

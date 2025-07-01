@@ -72,7 +72,7 @@ import {
 	FileUploader,
 	Button,
 	createResource,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { ref, watch } from 'vue'
 
 const search = ref(null)

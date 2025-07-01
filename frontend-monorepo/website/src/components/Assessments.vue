@@ -93,7 +93,7 @@ import {
 	createResource,
 	Button,
 	Badge,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { inject, ref } from 'vue'
 import AssessmentModal from '@/components/Modals/AssessmentModal.vue'
 import { Plus, Trash2 } from 'lucide-vue-next'

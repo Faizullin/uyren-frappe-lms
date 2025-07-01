@@ -55,7 +55,7 @@
 <script setup>
 /* core tiptap helpers */
 import { NodeViewContent, nodeViewProps, NodeViewWrapper } from '@tiptap/vue-3'
-import { Button, Dialog, FormControl, Tabs } from '@mono/frappe-ui'
+import { Button, Dialog, FormControl, Tabs } from '@mono/mono-frappe-ui'
 import { Settings } from 'lucide-vue-next'
 import { computed, reactive, ref, watch } from 'vue'
 

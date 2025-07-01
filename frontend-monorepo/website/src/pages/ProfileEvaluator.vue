@@ -141,7 +141,7 @@
 	</div>
 </template>
 <script setup>
-import { createResource, FormControl, Button, Badge, toast } from '@mono/frappe-ui'
+import { createResource, FormControl, Button, Badge, toast } from '@mono/mono-frappe-ui'
 import { computed, reactive, ref, onMounted, inject } from 'vue'
 import { convertToTitleCase } from '@/utils'
 import { Plus, X, Check, CircleAlert } from 'lucide-vue-next'

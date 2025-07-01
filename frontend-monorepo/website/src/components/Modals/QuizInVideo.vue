@@ -110,7 +110,7 @@ import {
 	ListRowItem,
 	ListSelectBanner,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, reactive, ref, watch } from 'vue'
 import { Plus, Trash2 } from 'lucide-vue-next'
 import { formatTimestamp } from '@/utils'

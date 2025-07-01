@@ -55,7 +55,7 @@
 </template>
 <script setup>
 import LMSLogo from '@/components/Icons/LMSLogo.vue'
-import { Button, call, FormControl, usePageMeta } from '@mono/frappe-ui'
+import { Button, call, FormControl, usePageMeta } from '@mono/mono-frappe-ui'
 import { computed, inject, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { sessionStore } from '@/stores/session'

@@ -68,7 +68,7 @@
 <script setup>
 import { inject, onMounted, reactive, ref, watch } from 'vue'
 import { convertToTitleCase } from '@/utils'
-import { Button, createListResource, FormControl, Rating } from '@mono/frappe-ui'
+import { Button, createListResource, FormControl, Rating } from '@mono/mono-frappe-ui'
 import FeedbackModal from '@/components/Modals/FeedbackModal.vue'
 
 const user = inject('$user')

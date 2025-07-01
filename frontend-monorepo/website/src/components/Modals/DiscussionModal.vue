@@ -40,7 +40,7 @@ import {
 	TextEditor,
 	createResource,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { reactive } from 'vue'
 import { singularize } from '@/utils'
 

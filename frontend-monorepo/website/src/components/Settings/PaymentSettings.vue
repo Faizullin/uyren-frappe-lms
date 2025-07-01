@@ -31,7 +31,7 @@
 </template>
 <script setup>
 import SettingFields from '@/components/Settings/SettingFields.vue'
-import { createResource, Badge, Button } from '@mono/frappe-ui'
+import { createResource, Badge, Button } from '@mono/mono-frappe-ui'
 import { watch } from 'vue'
 
 const props = defineProps({

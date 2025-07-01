@@ -64,7 +64,7 @@
 <script setup>
 import LMSLogo from '@/components/Icons/LMSLogo.vue'
 import { sessionStore } from '@/stores/session'
-import { Dropdown } from '@mono/frappe-ui'
+import { Dropdown } from '@mono/mono-frappe-ui'
 import Apps from '@/components/Apps.vue'
 import { useRouter } from 'vue-router'
 import { convertToTitleCase } from '@/utils'

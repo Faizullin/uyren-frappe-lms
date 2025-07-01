@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client'
-import { getCachedListResource } from '@mono/frappe-ui/src/resources/listResource'
-import { getCachedResource } from '@mono/frappe-ui/src/resources/resources'
-import { getGlobalSettings } from '@mono/frappe-ui/src/utils/global_settings'
+import { getCachedListResource } from '@mono/mono-frappe-ui/src/resources/listResource'
+import { getCachedResource } from '@mono/mono-frappe-ui/src/resources/resources'
+import { getGlobalSettings } from '@mono/mono-frappe-ui/src/utils/global_settings'
 
 export function initSocket() {
   const conf = getGlobalSettings()

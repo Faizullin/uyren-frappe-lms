@@ -93,7 +93,7 @@ import {
 	createResource,
 	FormControl,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { Plus, Search } from 'lucide-vue-next'
 import { sessionStore } from '../stores/session'
 import { inject, computed, ref, onMounted, watch } from 'vue'

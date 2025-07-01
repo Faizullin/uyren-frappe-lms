@@ -110,7 +110,7 @@ import {
 	FormControl,
 	Select,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref } from 'vue'
 import { GraduationCap } from 'lucide-vue-next'
 import { sessionStore } from '../stores/session'

@@ -39,7 +39,7 @@
 	<Event v-model="showEvent" :event="currentEvent" />
 </template>
 <script setup>
-import { Calendar, createListResource, Button } from '@mono/frappe-ui'
+import { Calendar, createListResource, Button } from '@mono/mono-frappe-ui'
 import { inject, ref } from 'vue'
 import Event from '@/components/Modals/Event.vue'
 

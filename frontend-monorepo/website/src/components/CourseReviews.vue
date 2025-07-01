@@ -63,7 +63,7 @@
 </template>
 <script setup>
 import { Star } from 'lucide-vue-next'
-import { createResource, Button } from '@mono/frappe-ui'
+import { createResource, Button } from '@mono/mono-frappe-ui'
 import { watch, ref, inject } from 'vue'
 import UserAvatar from '@/components/UserAvatar.vue'
 import ReviewModal from '@/components/Modals/ReviewModal.vue'

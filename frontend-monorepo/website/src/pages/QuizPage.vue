@@ -14,7 +14,7 @@
 </template>
 <script setup>
 import Quiz from '@/components/Quiz.vue'
-import { createResource, Breadcrumbs, usePageMeta } from '@mono/frappe-ui'
+import { createResource, Breadcrumbs, usePageMeta } from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { sessionStore } from '../stores/session'

@@ -14,7 +14,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog } from '@mono/frappe-ui'
+import { Dialog } from '@mono/mono-frappe-ui'
 import { computed } from 'vue'
 import VideoBlock from '@/components/VideoBlock.vue'
 

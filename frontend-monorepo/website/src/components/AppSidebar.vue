@@ -196,7 +196,7 @@ import { usersStore } from '@/stores/user'
 import { sessionStore } from '@/stores/session'
 import { useSidebar } from '@/stores/sidebar'
 import { useSettings } from '@/stores/settings'
-import { Button, createResource, Tooltip } from '@mono/frappe-ui'
+import { Button, createResource, Tooltip } from '@mono/mono-frappe-ui'
 import PageModal from '@/components/Modals/PageModal.vue'
 import { capture } from '@/telemetry'
 import LMSLogo from '@/components/Icons/LMSLogo.vue'
@@ -223,7 +223,7 @@ import {
 	showHelpModal,
 	minimize,
 	IntermediateStepModal,
-} from '@mono/frappe-ui/frappe'
+} from '@mono/mono-frappe-ui/frappe'
 
 const { user, sidebarSettings } = sessionStore()
 const { userResource } = usersStore()

@@ -41,7 +41,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog } from '@mono/frappe-ui'
+import { Dialog } from '@mono/mono-frappe-ui'
 import { onMounted, ref, nextTick } from 'vue'
 import Link from '@/components/Controls/Link.vue'
 

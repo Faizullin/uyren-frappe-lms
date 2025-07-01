@@ -14,7 +14,7 @@
 	</div>
 </template>
 <script setup>
-import { createResource } from '@mono/frappe-ui'
+import { createResource } from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref, watch } from 'vue'
 import ApexChart from 'vue3-apexcharts'
 import { theme } from '@/utils/theme'

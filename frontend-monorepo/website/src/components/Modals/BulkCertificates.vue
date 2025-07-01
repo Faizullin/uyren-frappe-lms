@@ -62,7 +62,7 @@
 </template>
 <script setup>
 import { inject, reactive } from 'vue'
-import { createResource, Dialog, FormControl, Switch, toast } from '@mono/frappe-ui'
+import { createResource, Dialog, FormControl, Switch, toast } from '@mono/mono-frappe-ui'
 import Link from '@/components/Controls/Link.vue'
 
 const show = defineModel()

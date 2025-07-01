@@ -99,7 +99,7 @@ import {
 	Badge,
 	Tooltip,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, watch } from 'vue'
 import { Users, Star } from 'lucide-vue-next'
 import { sessionStore } from '@/stores/session'

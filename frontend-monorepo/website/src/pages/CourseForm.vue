@@ -308,7 +308,7 @@ import {
 	FileUploader,
 	usePageMeta,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import {
 	inject,
 	onMounted,
@@ -322,7 +322,7 @@ import {
 import { Image, Trash2, X } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'
 import { capture, startRecording, stopRecording } from '@/telemetry'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 import { sessionStore } from '../stores/session'
 import { openSettings, getMetaInfo, updateMetaInfo } from '@/utils'
 import Link from '@/components/Controls/Link.vue'

@@ -66,7 +66,7 @@ import {
   FormControl,
   toast,
   usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import {
   computed,
   inject,
@@ -80,12 +80,12 @@ import { sessionStore } from '../stores/session'
 import LessonHelp from '@/components/LessonHelp.vue'
 import { capture, startRecording, stopRecording } from '@/telemetry'
 import { enablePlyr, getEditorTools } from '@/utils'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 import { ChevronRight } from 'lucide-vue-next'
 
 
 import CodeBlockPlugin from '@/components/MTextEditor/CodeBlockPlugin.ts'
-import { TextEditor } from '@mono/frappe-ui'
+import { TextEditor } from '@mono/mono-frappe-ui'
 import { common, createLowlight } from 'lowlight'
 const lowlight = createLowlight(common)
 

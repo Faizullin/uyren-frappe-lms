@@ -45,7 +45,7 @@
 </template>
 <script setup>
 import { inject } from 'vue'
-import { Badge } from '@mono/frappe-ui'
+import { Badge } from '@mono/mono-frappe-ui'
 import { MapPin, User } from 'lucide-vue-next'
 
 const dayjs = inject('$dayjs')

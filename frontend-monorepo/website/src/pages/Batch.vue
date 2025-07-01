@@ -214,7 +214,7 @@ import {
 	Tabs,
 	Badge,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import {
 	Clock,
 	LayoutDashboard,

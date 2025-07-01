@@ -96,7 +96,7 @@ import {
 	Button,
 	TabButtons,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, watch, ref, onMounted, watchEffect } from 'vue'
 import { sessionStore } from '@/stores/session'
 import { Edit } from 'lucide-vue-next'

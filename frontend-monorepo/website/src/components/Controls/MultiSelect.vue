@@ -103,7 +103,7 @@ import {
 	ComboboxOptions,
 	ComboboxOption,
 } from '@headlessui/vue'
-import { createResource, Popover, Button } from '@mono/frappe-ui'
+import { createResource, Popover, Button } from '@mono/mono-frappe-ui'
 import { ref, computed, nextTick, useAttrs } from 'vue'
 import { watchDebounced } from '@vueuse/core'
 import { X, Plus } from 'lucide-vue-next'

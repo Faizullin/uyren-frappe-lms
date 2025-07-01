@@ -85,7 +85,7 @@ import {
 	ListRow,
 	ListRowItem,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { Pencil } from 'lucide-vue-next'

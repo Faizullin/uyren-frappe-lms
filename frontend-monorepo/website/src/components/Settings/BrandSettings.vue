@@ -27,7 +27,7 @@
 	</div>
 </template>
 <script setup>
-import { createResource, Button, Badge } from '@mono/frappe-ui'
+import { createResource, Button, Badge } from '@mono/mono-frappe-ui'
 import SettingFields from '@/components/Settings/SettingFields.vue'
 import { watch, ref } from 'vue'
 

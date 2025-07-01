@@ -44,7 +44,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, Input, TextEditor, createResource, toast } from '@mono/frappe-ui'
+import { Dialog, Input, TextEditor, createResource, toast } from '@mono/mono-frappe-ui'
 import { reactive } from 'vue'
 
 const show = defineModel()

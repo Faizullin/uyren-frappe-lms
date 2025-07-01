@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { createResource } from '@mono/frappe-ui'
+import { createResource } from '@mono/mono-frappe-ui'
 
 export const usersStore = defineStore('lms-users', () => {
 	let userResource = createResource({

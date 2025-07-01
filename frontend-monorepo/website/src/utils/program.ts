@@ -2,7 +2,7 @@ import { createApp, h } from 'vue'
 import { Code } from 'lucide-vue-next'
 import translationPlugin from '@/translation'
 import ProgrammingExerciseModal from '@/pages/ProgrammingExercises/ProgrammingExerciseModal.vue';
-import { call } from '@mono/frappe-ui';
+import { call } from '@mono/mono-frappe-ui';
 import { usersStore } from '@/stores/user'
 
 

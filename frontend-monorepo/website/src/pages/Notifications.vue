@@ -64,7 +64,7 @@ import {
 	TabButtons,
 	Button,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { sessionStore } from '../stores/session'
 import { computed, inject, ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'

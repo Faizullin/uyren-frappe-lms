@@ -8,7 +8,7 @@
 	/>
 </template>
 <script setup>
-import { FileUploader } from '@mono/frappe-ui'
+import { FileUploader } from '@mono/mono-frappe-ui'
 import { onMounted, ref, nextTick } from 'vue'
 
 const fileUploader = ref(null)

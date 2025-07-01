@@ -88,7 +88,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, createDocumentResource, createResource } from '@mono/frappe-ui'
+import { Dialog, createDocumentResource, createResource } from '@mono/mono-frappe-ui'
 import { ref, computed, watch } from 'vue'
 import { useSettings } from '@/stores/settings'
 import SettingDetails from '@/components/Settings/SettingDetails.vue'

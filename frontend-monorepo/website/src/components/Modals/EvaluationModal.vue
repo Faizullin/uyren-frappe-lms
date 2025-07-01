@@ -66,7 +66,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, createResource, Select, FormControl, toast } from '@mono/frappe-ui'
+import { Dialog, createResource, Select, FormControl, toast } from '@mono/mono-frappe-ui'
 import { reactive, watch, inject } from 'vue'
 import { formatTime } from '@/utils/'
 

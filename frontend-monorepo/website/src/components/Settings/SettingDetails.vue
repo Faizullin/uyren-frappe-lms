@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { Button, Badge, toast } from '@mono/frappe-ui'
+import { Button, Badge, toast } from '@mono/mono-frappe-ui'
 import SettingFields from '@/components/Settings/SettingFields.vue'
 
 const props = defineProps({

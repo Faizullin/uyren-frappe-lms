@@ -42,10 +42,10 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, createResource, toast } from '@mono/frappe-ui'
+import { Dialog, createResource, toast } from '@mono/mono-frappe-ui'
 import { ref, inject } from 'vue'
 import Link from '@/components/Controls/Link.vue'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 import { openSettings } from '@/utils'
 import { useRouter } from 'vue-router'
 

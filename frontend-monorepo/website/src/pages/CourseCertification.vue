@@ -36,7 +36,7 @@
 </template>
 <script setup>
 import { computed, inject, onMounted, ref } from 'vue'
-import { Breadcrumbs, call, createResource, usePageMeta } from '@mono/frappe-ui'
+import { Breadcrumbs, call, createResource, usePageMeta } from '@mono/mono-frappe-ui'
 import { useRouter } from 'vue-router'
 import { sessionStore } from '../stores/session'
 import UpcomingEvaluations from '@/components/UpcomingEvaluations.vue'

@@ -102,7 +102,7 @@ import {
 	call,
 	createListResource,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { ClipboardList, Plus } from 'lucide-vue-next'
 import { sessionStore } from '@/stores/session'
 import { useRouter } from 'vue-router'

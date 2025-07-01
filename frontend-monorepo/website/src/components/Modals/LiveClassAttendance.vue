@@ -62,7 +62,7 @@
 	</Dialog>
 </template>
 <script setup lang="ts">
-import { Avatar, createListResource, Dialog, Tooltip } from '@mono/frappe-ui'
+import { Avatar, createListResource, Dialog, Tooltip } from '@mono/mono-frappe-ui'
 import { useRouter } from 'vue-router'
 import { inject } from 'vue'
 

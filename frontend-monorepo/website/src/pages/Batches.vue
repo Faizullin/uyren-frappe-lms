@@ -92,7 +92,7 @@ import {
 	Select,
 	TabButtons,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref, watch } from 'vue'
 import { Plus } from 'lucide-vue-next'
 import { sessionStore } from '@/stores/session'

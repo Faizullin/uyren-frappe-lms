@@ -3,7 +3,7 @@ import { createApp, h } from 'vue'
 import AssessmentPlugin from '@/components/AssessmentPlugin.vue'
 import translationPlugin from '../translation'
 import { usersStore } from '@/stores/user'
-import { call } from '@mono/frappe-ui'
+import { call } from '@mono/mono-frappe-ui'
 
 export class Assignment {
 	constructor({ data, api, readOnly }) {

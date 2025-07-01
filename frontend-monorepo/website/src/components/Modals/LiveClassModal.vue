@@ -91,7 +91,7 @@ import {
 	FormControl,
 	Autocomplete,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { reactive, inject, onMounted } from 'vue'
 import { getTimezones, getUserTimezone } from '@/utils/'
 

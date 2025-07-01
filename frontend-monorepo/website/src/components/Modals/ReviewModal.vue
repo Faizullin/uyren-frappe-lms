@@ -27,7 +27,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, FormControl, createResource, toast, Rating } from '@mono/frappe-ui'
+import { Dialog, FormControl, createResource, toast, Rating } from '@mono/mono-frappe-ui'
 import { reactive } from 'vue'
 
 const show = defineModel()

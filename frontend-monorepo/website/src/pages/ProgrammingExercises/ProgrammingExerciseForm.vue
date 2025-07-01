@@ -112,12 +112,12 @@ import {
 	FormControl,
 	TextEditor,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, ref, watch } from 'vue'
-import {
-	ProgrammingExercise,
-	ProgrammingExercises,
-	TestCase,
+import type {
+  ProgrammingExercise,
+  ProgrammingExercises,
+  TestCase,
 } from '@/types/programming-exercise'
 import ChildTable from '@/components/Controls/ChildTable.vue'
 import { ClipboardList, Play, Trash2 } from 'lucide-vue-next'

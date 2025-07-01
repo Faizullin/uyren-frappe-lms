@@ -48,7 +48,7 @@
 	</Dialog>
 </template>
 <script setup>
-import { Dialog, FormControl, createResource, toast } from '@mono/frappe-ui'
+import { Dialog, FormControl, createResource, toast } from '@mono/mono-frappe-ui'
 import Link from '@/components/Controls/Link.vue'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'

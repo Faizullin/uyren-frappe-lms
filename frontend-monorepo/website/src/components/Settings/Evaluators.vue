@@ -70,7 +70,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { createResource, Button, FormControl, call, Avatar } from '@mono/frappe-ui'
+import { createResource, Button, FormControl, call, Avatar } from '@mono/mono-frappe-ui'
 import { ref, watch } from 'vue'
 import { Plus, X } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'

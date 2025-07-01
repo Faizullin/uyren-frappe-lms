@@ -8,7 +8,7 @@ import { createDialog } from '@/utils/dialogs.js'
 import translationPlugin from './translation'
 import { usersStore } from './stores/user'
 import { initSocket } from './socket.js'
-import { FrappeUI, setConfig, frappeRequest, pageMetaPlugin, dayjs } from '@mono/frappe-ui'
+import { FrappeUI, setConfig, frappeRequest, pageMetaPlugin, dayjs } from '@mono/mono-frappe-ui'
 
 const pinia = createPinia()
 const app = createApp(App)

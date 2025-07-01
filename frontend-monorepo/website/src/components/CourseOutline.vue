@@ -147,7 +147,7 @@
 	/>
 </template>
 <script setup>
-import { Button, createResource, Tooltip, toast } from '@mono/frappe-ui'
+import { Button, createResource, Tooltip, toast } from '@mono/mono-frappe-ui'
 import { getCurrentInstance, inject, ref, watch } from 'vue'
 import Draggable from 'vuedraggable'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'

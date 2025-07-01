@@ -70,7 +70,7 @@ import {
 	ListRow,
 	ListRowItem,
 	Rating,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { reactive, computed } from 'vue'
 
 const show = defineModel()

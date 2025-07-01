@@ -1,4 +1,4 @@
-import { Dialog, ErrorMessage } from '@mono/frappe-ui'
+import { Dialog, ErrorMessage } from '@mono/mono-frappe-ui'
 import { h, reactive, ref } from 'vue'
 
 let dialogs = ref([])

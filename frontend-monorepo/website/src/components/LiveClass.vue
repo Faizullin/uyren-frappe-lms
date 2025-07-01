@@ -107,7 +107,7 @@
 	<LiveClassAttendance v-model="showAttendance" :live_class="attendanceFor" />
 </template>
 <script setup>
-import { createListResource, Button, Tooltip } from '@mono/frappe-ui'
+import { createListResource, Button, Tooltip } from '@mono/mono-frappe-ui'
 import {
 	Plus,
 	Clock,

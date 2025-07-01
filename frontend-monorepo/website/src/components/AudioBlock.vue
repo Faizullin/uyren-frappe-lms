@@ -38,7 +38,7 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 import { Play, Pause, Volume2, VolumeX } from 'lucide-vue-next'
-import { Button } from '@mono/frappe-ui'
+import { Button } from '@mono/mono-frappe-ui'
 
 const isPlaying = ref(false)
 const audio = ref(null)

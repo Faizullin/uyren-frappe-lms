@@ -271,7 +271,7 @@ import {
 	Button,
 	Tooltip,
 	usePageMeta,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import {
 	computed,
 	watch,

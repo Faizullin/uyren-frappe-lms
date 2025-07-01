@@ -189,7 +189,7 @@ import {
 	ListSelectBanner,
 	usePageMeta,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { computed, ref } from 'vue'
 import { Plus, Trash2 } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'

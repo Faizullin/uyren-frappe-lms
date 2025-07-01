@@ -145,7 +145,7 @@ import {
 	Tooltip,
 	Textarea,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import {
 	User,
 	Calendar,

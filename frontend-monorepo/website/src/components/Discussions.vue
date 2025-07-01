@@ -67,7 +67,7 @@
 	/>
 </template>
 <script setup>
-import { createResource, Button } from '@mono/frappe-ui'
+import { createResource, Button } from '@mono/mono-frappe-ui'
 import UserAvatar from '@/components/UserAvatar.vue'
 import { singularize, timeAgo } from '@/utils'
 import { ref, onMounted, inject, onUnmounted } from 'vue'

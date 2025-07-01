@@ -52,7 +52,7 @@
 	</div>
 </template>
 <script setup>
-import { FormControl, Popover } from '@mono/frappe-ui'
+import { FormControl, Popover } from '@mono/mono-frappe-ui'
 import * as icons from 'lucide-vue-next'
 import { ref, computed, onMounted, nextTick } from 'vue'
 

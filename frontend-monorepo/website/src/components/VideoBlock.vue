@@ -153,7 +153,7 @@
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'
 import { Pause, Maximize, Volume2, VolumeX } from 'lucide-vue-next'
-import { Button, Dialog } from '@mono/frappe-ui'
+import { Button, Dialog } from '@mono/mono-frappe-ui'
 import { formatSeconds, formatTimestamp } from '@/utils'
 import Play from '@/components/Icons/Play.vue'
 import QuizInVideo from '@/components/Modals/QuizInVideo.vue'

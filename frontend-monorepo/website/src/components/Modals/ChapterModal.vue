@@ -77,12 +77,12 @@ import {
 	FormControl,
 	Switch,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { reactive, watch, inject } from 'vue'
 import { getFileSize } from '@/utils/'
 import { capture } from '@/telemetry'
 import { FileText, X } from 'lucide-vue-next'
-import { useOnboarding } from '@mono/frappe-ui/frappe'
+import { useOnboarding } from '@mono/mono-frappe-ui/frappe'
 
 const show = defineModel()
 const outline = defineModel('outline')

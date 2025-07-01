@@ -1,4 +1,4 @@
-import frappeUIPreset from '@mono/frappe-ui/src/tailwind/preset'
+import frappeUIPreset from '@mono/mono-frappe-ui/src/tailwind/preset'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,8 +6,8 @@ export default {
   content: [
     './index.html',
      './src/**/*.{vue,js,ts,jsx,tsx}',
-     "../packages/frappe-ui/src/components/**/*.{vue,js,ts,jsx,tsx}",
-      "../packages/frappe-ui/frappe/**/*.{vue,js,ts,jsx,tsx}",
+     "../packages/@mono-frappe-ui/src/**/*.{vue,js,ts,jsx,tsx}",
+      "../packages/@mono-frappe-ui/frappe/**/*.{vue,js,ts,jsx,tsx}",
   ],
 	theme: {
 		extend: {

@@ -14,7 +14,7 @@
 	</div>
 </template>
 <script setup>
-import { Breadcrumbs, createResource, usePageMeta } from '@mono/frappe-ui'
+import { Breadcrumbs, createResource, usePageMeta } from '@mono/mono-frappe-ui'
 import { computed, inject, onMounted, ref } from 'vue'
 import { sessionStore } from '../stores/session'
 import Assignment from '@/components/Assignment.vue'

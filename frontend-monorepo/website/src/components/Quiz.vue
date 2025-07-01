@@ -311,7 +311,7 @@ import {
 	TextEditor,
 	FormControl,
 	toast,
-} from '@mono/frappe-ui'
+} from '@mono/mono-frappe-ui'
 import { ref, watch, reactive, inject, computed } from 'vue'
 import { CheckCircle, XCircle, MinusCircle } from 'lucide-vue-next'
 import { timeAgo } from '@/utils'

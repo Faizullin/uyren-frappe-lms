@@ -64,7 +64,7 @@
 <script setup>
 import Autocomplete from '@/components/Controls/Autocomplete.vue'
 import { watchDebounced } from '@vueuse/core'
-import { createResource, Button } from '@mono/frappe-ui'
+import { createResource, Button } from '@mono/mono-frappe-ui'
 import { Plus, X } from 'lucide-vue-next'
 import { useAttrs, computed, ref } from 'vue'
 

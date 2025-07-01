@@ -61,7 +61,7 @@
 	</button>
 </template>
 <script setup>
-import { Tooltip } from '@mono/frappe-ui'
+import { Tooltip } from '@mono/mono-frappe-ui'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import * as icons from 'lucide-vue-next'
