@@ -1,0 +1,18 @@
+{
+	"name": "frontend-monorepo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "pnpm --filter website dev",
+		"build": "pnpm --filter website build",
+		"test:all": "pnpm -r test"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.12.4",
+	"dependencies": {
+		"http-proxy": "^1.18.1"
+	}
+}
