@@ -26,20 +26,23 @@ class CourseLesson(Document):
 			self.save_lesson_details_in_quiz(self.instructor_content)
 
 	def save_lesson_details_in_quiz(self, content):
-		content = json.loads(self.content)
-		for block in content.get("blocks"):
-			if block.get("type") == "quiz":
-				quiz = block.get("data").get("quiz")
-				if not frappe.db.exists("LMS Quiz", quiz):
-					frappe.throw(_("Invalid Quiz ID in content"))
-				frappe.db.set_value(
-					"LMS Quiz",
-					quiz,
-					{
-						"course": self.course,
-						"lesson": self.name,
-					},
-				)
+		#MY
+		# content = json.loads(self.content)
+		# for block in content.get("blocks"):
+		# 	if block.get("type") == "quiz":
+		# 		quiz = block.get("data").get("quiz")
+		# 		if not frappe.db.exists("LMS Quiz", quiz):
+		# 			frappe.throw(_("Invalid Quiz ID in content"))
+		# 		frappe.db.set_value(
+		# 			"LMS Quiz",
+		# 			quiz,
+		# 			{
+		# 				"course": self.course,
+		# 				"lesson": self.name,
+		# 			},
+		# 		)
+		pass
+		#ENDMY
 
 
 @frappe.whitelist()

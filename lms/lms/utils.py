@@ -166,37 +166,39 @@ def get_lesson_details(chapter, progress=False):
 
 
 def get_lesson_icon(body, content):
-	if content:
-		content = json.loads(content)
+	#MY
+	# if content:
+	# 	content = json.loads(content)
 
-		for block in content.get("blocks"):
-			if block.get("type") == "upload" and block.get("data").get("file_type").lower() in [
-				"mp4",
-				"webm",
-				"ogg",
-				"mov",
-			]:
-				return "icon-youtube"
+	# 	for block in content.get("blocks"):
+	# 		if block.get("type") == "upload" and block.get("data").get("file_type").lower() in [
+	# 			"mp4",
+	# 			"webm",
+	# 			"ogg",
+	# 			"mov",
+	# 		]:
+	# 			return "icon-youtube"
 
-			if block.get("type") == "embed" and block.get("data").get("service") in [
-				"youtube",
-				"vimeo",
-				"cloudflareStream",
-				"bunnyStream",
-			]:
-				return "icon-youtube"
+	# 		if block.get("type") == "embed" and block.get("data").get("service") in [
+	# 			"youtube",
+	# 			"vimeo",
+	# 			"cloudflareStream",
+	# 			"bunnyStream",
+	# 		]:
+	# 			return "icon-youtube"
 
-			if block.get("type") == "quiz":
-				return "icon-quiz"
+	# 		if block.get("type") == "quiz":
+	# 			return "icon-quiz"
 
-		return "icon-list"
+	# 	return "icon-list"
 
-	macros = find_macros(body)
-	for macro in macros:
-		if macro[0] == "YouTubeVideo" or macro[0] == "Video":
-			return "icon-youtube"
-		elif macro[0] == "Quiz":
-			return "icon-quiz"
+	# macros = find_macros(body)
+	# for macro in macros:
+	# 	if macro[0] == "YouTubeVideo" or macro[0] == "Video":
+	# 		return "icon-youtube"
+	# 	elif macro[0] == "Quiz":
+	# 		return "icon-quiz"
+	#ENDMY
 
 	return "icon-list"
 
