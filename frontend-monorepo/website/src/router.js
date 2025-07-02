@@ -3,19 +3,59 @@ import { sessionStore } from './stores/session'
 import { useSettings } from './stores/settings'
 import { usersStore } from './stores/user'
 
-let defaultRoute = '/courses'
+let defaultRoute = '/home'
 const routes = [
   {
     path: '/',
     redirect: {
-      name: 'Courses',
+      name: 'Home',
     },
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: () => import('@/pages/front/Home.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/pages/front/Login.vue'),
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/pages/front/Register.vue'),
+  },
+  {
+    path: '/sponsorship',
+    name: 'Sponsorship',
+    component: () => import('@/pages/front/Sponsorship.vue'),
   },
   {
     path: '/courses',
     name: 'Courses',
-    component: () => import('@/pages/Courses.vue'),
+    component: () => import('@/pages/front/Courses.vue'),
   },
+  {
+    path: '/certification',
+    name: 'Certification',
+    component: () => import('@/pages/front/Certification.vue'),
+  },
+	{
+		path: '/grants',
+		name: 'Grants',
+		component: () => import('@/pages/front/Grants.vue'),
+	},
+	{
+		path: '/community',
+		name: 'Community',
+		component: () => import('@/pages/front/Community.vue'),
+	},
+	{
+		path: '/sponsorship',
+		name: 'Sponsorship',
+		component: () => import('@/pages/front/Sponsorship.vue'),
+	},
   {
     path: '/courses/:courseName',
     name: 'CourseDetail',

@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
         // },
         // Production build config for asset paths and HTML output
         buildConfig: {
-          indexHtmlPath: '../lms/www/frontend.html',
+          indexHtmlPath: '../../lms/www/frontend.html',
         },
       }),
     ],

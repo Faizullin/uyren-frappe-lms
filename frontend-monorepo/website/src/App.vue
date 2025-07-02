@@ -1,12 +1,13 @@
 <template>
-	<FrappeUIProvider>
-		<Layout>
-			<div class="text-base">
-				<router-view />
-			</div>
-		</Layout>
-		<Dialogs />
-	</FrappeUIProvider>
+  <FrappeUIProvider>
+    <Layout>
+      <div class="text-base">
+        <router-view />
+        <ChatWidget />
+      </div>
+    </Layout>
+    <Dialogs />
+  </FrappeUIProvider>
 </template>
 <script setup>
 import { FrappeUIProvider } from '@mono/mono-frappe-ui'
@@ -20,38 +21,51 @@ import { usersStore } from '@/stores/user'
 import { useRouter } from 'vue-router'
 import { posthogSettings } from '@/telemetry'
 
+
+import ChatWidget from '@/components/front/ChatWidget.vue'
+
+
 const screenSize = useScreenSize()
 const router = useRouter()
 const noSidebar = ref(false)
 const { userResource } = usersStore()
 
+
+const noSidebarRoutes = [
+  '/persona',
+  '/home',
+  '/login',
+  '/register',
+]
+
+
 router.beforeEach((to, from, next) => {
-	if (to.query.fromLesson || to.path === '/persona') {
-		noSidebar.value = true
-	} else {
-		noSidebar.value = false
-	}
-	next()
+  if (to.query.fromLesson || noSidebarRoutes.includes(to.path)) {
+    noSidebar.value = true
+  } else {
+    noSidebar.value = false
+  }
+  next()
 })
 
 const Layout = computed(() => {
-	if (noSidebar.value) {
-		return NoSidebarLayout
-	}
-	if (screenSize.width < 640) {
-		return MobileLayout
-	}
+  if (noSidebar.value) {
+    return NoSidebarLayout
+  }
+  if (screenSize.width < 640) {
+    return MobileLayout
+  }
 
-	return DesktopLayout
+  return DesktopLayout
 })
 
 onUnmounted(() => {
-	noSidebar.value = false
+  noSidebar.value = false
 })
 
 watch(userResource, () => {
-	if (userResource.data) {
-		posthogSettings.reload()
-	}
+  if (userResource.data) {
+    posthogSettings.reload()
+  }
 })
 </script>

@@ -29,8 +29,10 @@
                   'duration-200': !openInstructorEditor,
                 }" />
               </div>
-              <div v-show="openInstructorEditor" id="instructor-notes"
-                class="ProseMirror prose prose-table:table-fixed prose-td:p-2 prose-th:p-2 prose-td:border prose-th:border prose-td:border-outline-gray-2 prose-th:border-outline-gray-2 prose-td:relative prose-th:relative prose-th:bg-surface-gray-2 prose-sm max-w-none !whitespace-normal py-3">
+              <div v-show="openInstructorEditor">
+                <TextEditor editor-class="prose-sm min-h-[4rem] border rounded-b-lg border-t-0 p-2" :content="instructorNotesHtml"
+                  placeholder="Type instructor notes..." @change="(val) => instructorNotesHtml = val" :bubbleMenu="true"
+                  :fixed-menu="true" :extensions="contentExtensions" />
               </div>
             </div>
           </div>
@@ -91,6 +93,7 @@ const lowlight = createLowlight(common)
 
 // import {CodeBlockLowlight} from '@tiptap/extension-code-block-lowlight'
 const contentHtml = ref('')
+const instructorNotesHtml = ref('')
 const contentExtensions = {
   "codeBlockLowlight": CodeBlockPlugin.configure({ lowlight }),
 }
@@ -152,6 +155,7 @@ const lesson = reactive({
   body: '',
   instructor_notes: '',
   content: '',
+  instructor_content: '',
 })
 
 const lessonDetails = createResource({
@@ -171,7 +175,6 @@ const lessonDetails = createResource({
         ? true
         : false
       addLessonContent(data)
-      // addInstructorNotes(data)
     }
   },
 })
@@ -179,11 +182,6 @@ const lessonDetails = createResource({
 const convertToJSON = (data) => {
   try {
     return data
-    // const content = JSON.parse(data)
-    // console.log('Parsed content:', content)
-    // if (content["html"]) {
-    //   return content["html"]
-    // }
   } catch (error) {
     throw error;
   }
@@ -191,18 +189,37 @@ const convertToJSON = (data) => {
 }
 
 const addLessonContent = (data) => {
-  const contentData = convertToJSON(data.lesson.content)
-  contentHtml.value = contentData;
-  // editor.value.isReady.then(() => {
-  //   if (data.lesson.content) {
-  //     editor.value.render(JSON.parse(data.lesson.content))
-  //   } else if (data.lesson.body) {
-  //     let blocks = convertToJSON(data.lesson)
-  //     editor.value.render({
-  //       blocks: blocks,
-  //     })
-  //   }
-  // })
+  if (data.lesson.content) {
+    try {
+      const parsedContent = JSON.parse(data.lesson.content)
+      if (parsedContent.html) {
+        // New format: has both json and html
+        contentHtml.value = parsedContent.html
+      } else {
+        // Legacy format: just HTML content
+        contentHtml.value = data.lesson.content
+      }
+    } catch (e) {
+      // Not JSON, treat as plain HTML
+      contentHtml.value = data.lesson.content
+    }
+  }
+
+  if (data.lesson.instructor_content) {
+    try {
+      const parsedInstructorContent = JSON.parse(data.lesson.instructor_content)
+      if (parsedInstructorContent.html) {
+        // New format: has both json and html
+        instructorNotesHtml.value = parsedInstructorContent.html
+      } else {
+        // Legacy format: just HTML content
+        instructorNotesHtml.value = data.lesson.instructor_content
+      }
+    } catch (e) {
+      // Not JSON, treat as plain HTML
+      instructorNotesHtml.value = data.lesson.instructor_content
+    }
+  }
 }
 
 const addInstructorNotes = (data) => {
@@ -276,12 +293,49 @@ const lessonReference = createResource({
 })
 
 
+// Function to convert HTML to a simple JSON representation for TipTap
+const convertHtmlToTipTapJson = (html) => {
+  // This is a simplified conversion - in a real implementation,
+  // you might want to use DOMParser and more sophisticated parsing
+  return {
+    type: 'doc',
+    content: [
+      {
+        type: 'paragraph',
+        content: [
+          {
+            type: 'text',
+            text: html.replace(/<[^>]*>/g, '') // Strip HTML tags for simple text extraction
+          }
+        ]
+      }
+    ]
+  }
+}
+
 const saveLesson = (e) => {
   showSuccessMessage = false
   if (typeof e != 'undefined' && e.showSuccessMessage) {
     showSuccessMessage = true
   }
-  lesson.content = contentHtml.value
+
+  // Store content in combined format: {json: ..., html: ...}
+  lesson.content = JSON.stringify({
+    json: convertHtmlToTipTapJson(contentHtml.value),
+    html: contentHtml.value
+  })
+
+  // Store instructor content in combined format: {json: ..., html: ...}
+  // Only store if there's actual content
+  if (instructorNotesHtml.value && instructorNotesHtml.value.trim()) {
+    lesson.instructor_content = JSON.stringify({
+      json: convertHtmlToTipTapJson(instructorNotesHtml.value),
+      html: instructorNotesHtml.value
+    })
+  } else {
+    lesson.instructor_content = ''
+  }
+
   if (lessonDetails.data?.lesson) {
     editCurrentLesson()
   } else {
@@ -396,217 +450,3 @@ usePageMeta(() => {
   }
 })
 </script>
-<style>
-.embed-tool__caption,
-.cdx-simple-image__caption {
-  display: none;
-}
-
-.ce-block__content {
-  max-width: none;
-}
-
-.codex-editor--narrow .ce-toolbar__actions {
-  right: 100%;
-}
-
-.ce-toolbar__content {
-  max-width: none;
-}
-
-.codeBoxHolder {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.codeBoxTextArea {
-  width: 100%;
-  min-height: 30px;
-  padding: 10px;
-  border-radius: 2px 2px 2px 0;
-  border: none !important;
-  outline: none !important;
-  font: 14px monospace;
-}
-
-.codeBoxSelectDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
-}
-
-.codeBoxSelectInput {
-  border-radius: 0 0 20px 2px;
-  padding: 2px 26px;
-  padding-top: 0;
-  padding-right: 0;
-  text-align: left;
-  cursor: pointer;
-  border: none !important;
-  outline: none !important;
-}
-
-.codeBoxSelectDropIcon {
-  position: absolute !important;
-  left: 10px !important;
-  bottom: 0 !important;
-  width: unset !important;
-  height: unset !important;
-  font-size: 16px !important;
-}
-
-.codeBoxSelectPreview {
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border-radius: 2px;
-  box-shadow: 0 3px 15px -3px rgba(13, 20, 33, 0.13);
-  position: absolute;
-  top: 100%;
-  margin: 5px 0;
-  max-height: 30vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 10000;
-}
-
-.codeBoxSelectItem {
-  width: 100%;
-  padding: 5px 20px;
-  margin: 0;
-  cursor: pointer;
-}
-
-.codeBoxSelectedItem {
-  background-color: lightblue !important;
-}
-
-.codeBoxShow {
-  display: flex !important;
-}
-
-.dark {
-  color: #abb2bf;
-  background-color: #282c34;
-}
-
-.light {
-  color: #383a42;
-  background-color: #fafafa;
-}
-
-.codeBoxTextArea {
-  line-height: 1.7;
-}
-
-.prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-  overflow-x: unset;
-}
-
-iframe {
-  border: none !important;
-}
-
-.tc-table {
-  border-left: 1px solid #e8e8eb;
-}
-
-.ce-toolbox__button[data-tool='markdown'] {
-  display: none !important;
-}
-
-.ce-popover-item[data-item-name='markdown'] {
-  display: none !important;
-}
-
-.plyr__volume input[type='range'] {
-  display: none;
-}
-
-.plyr__control--overlaid {
-  background: radial-gradient(circle,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.5) 50%);
-}
-
-.plyr__control:hover {
-  background: none;
-}
-
-.plyr--video {
-  border: 1px solid theme('colors.gray.200');
-  border-radius: 8px;
-}
-
-.ce-popover__container {
-  border-radius: 12px;
-  padding: 8px;
-}
-
-.cdx-search-field {
-  border: none;
-}
-
-.cdx-search-field__input {
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.cdx-search-field__input::before {
-  font-weight: 400;
-}
-
-.cdx-search-field__input:focus {
-  --tw-ring-color: theme('colors.gray.100');
-}
-
-.ce-popover-item__title {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.ce-popover-item__icon svg {
-  width: 15px;
-  height: 15px;
-}
-
-.ce-popover--opened>.ce-popover__container {
-  max-height: unset;
-}
-
-.cdx-search-field__icon svg {
-  width: 15px;
-  height: 15px;
-}
-
-.cdx-search-field__icon {
-  margin-right: 5px;
-}
-
-.cdx-block.embed-tool {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.cdx-block.embed-tool::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 1000;
-}
-
-:root {
-  --plyr-range-fill-background: white;
-  --plyr-video-control-background-hover: transparent;
-}
-</style>
