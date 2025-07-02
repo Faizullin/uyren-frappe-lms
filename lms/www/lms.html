@@ -31,12 +31,12 @@
 		<script>
 			document.getElementById('seo-content').style.display = 'none';
 		</script>
-	
+
           <script>
               {% for key in boot %}
               window["{{ key }}"] = {{ boot[key] | tojson }};
               {% endfor %}
           </script>
           </body>
-          
+
 </html>
