@@ -4,6 +4,78 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@headlessui/vue':
+      specifier: ^1.0.0
+      version: 1.7.23
+    '@tiptap/core':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-code-block':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-code-block-lowlight':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-color':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-heading':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-highlight':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-image':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-link':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-mention':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-placeholder':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-table':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-table-cell':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-table-header':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-table-row':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-text-align':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-text-style':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/extension-typography':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/pm':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/suggestion':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@tiptap/vue-3':
+      specifier: ^2.0.0
+      version: 2.23.0
+    '@vueuse/core':
+      specifier: ^10.0.0
+      version: 10.11.1
+    markdown-it:
+      specifier: ^14.0.0
+      version: 14.1.0
+
 importers:
 
   .:
@@ -231,12 +303,78 @@ importers:
       '@floating-ui/vue':
         specifier: ^1.1.7
         version: 1.1.7(vue@3.5.17(typescript@5.8.3))
+      '@headlessui/vue':
+        specifier: 'catalog:'
+        version: 1.7.23(vue@3.5.17(typescript@5.8.3))
       '@mono/mono-frappe-ui':
         specifier: workspace:*
         version: link:../packages/@mono-frappe-ui
       '@mono/utils':
         specifier: workspace:*
         version: link:../packages/utils
+      '@tiptap/core':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/pm@2.23.0)
+      '@tiptap/extension-code-block':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)
+      '@tiptap/extension-code-block-lowlight':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/extension-code-block@2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)(highlight.js@11.11.1)(lowlight@3.3.0)
+      '@tiptap/extension-color':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/extension-text-style@2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0)))
+      '@tiptap/extension-heading':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-highlight':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-image':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-link':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)
+      '@tiptap/extension-mention':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)(@tiptap/suggestion@2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0))
+      '@tiptap/extension-placeholder':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)
+      '@tiptap/extension-table':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)
+      '@tiptap/extension-table-cell':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-table-header':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-table-row':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-text-align':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-text-style':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/extension-typography':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))
+      '@tiptap/pm':
+        specifier: 'catalog:'
+        version: 2.23.0
+      '@tiptap/suggestion':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)
+      '@tiptap/vue-3':
+        specifier: 'catalog:'
+        version: 2.23.0(@tiptap/core@2.23.0(@tiptap/pm@2.23.0))(@tiptap/pm@2.23.0)(vue@3.5.17(typescript@5.8.3))
+      '@vueuse/core':
+        specifier: 'catalog:'
+        version: 10.11.1(vue@3.5.17(typescript@5.8.3))
       ace-builds:
         specifier: ^1.36.2
         version: 1.43.0
@@ -252,6 +390,9 @@ importers:
       lucide-vue-next:
         specifier: ^0.525.0
         version: 0.525.0(vue@3.5.17(typescript@5.8.3))
+      markdown-it:
+        specifier: 'catalog:'
+        version: 14.1.0
       pinia:
         specifier: ^3.0.3
         version: 3.0.3(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))

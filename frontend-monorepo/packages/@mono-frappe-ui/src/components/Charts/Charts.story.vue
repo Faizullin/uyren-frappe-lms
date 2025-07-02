@@ -3,7 +3,7 @@ import AxisChart from './AxisChart.vue'
 import DonutChart from './DonutChart.vue'
 import FunnelChart from './FunnelChart.vue'
 import NumberChart from './NumberChart.vue'
-import { AxisChartConfig, DonutChartConfig } from './types'
+import type { AxisChartConfig, DonutChartConfig } from './types'
 
 const salesData = [
   { month: new Date('2021-01-01'), sales: 200, profit: 50, returns: 20 },

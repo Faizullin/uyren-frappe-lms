@@ -1,5 +1,4 @@
 export default async function call(method, args, options = {}) {
-	console.log("call method:", method, "with args:", args, "and options:", options)
 	if (!args) {
 		args = {}
 	}
@@ -16,8 +15,6 @@ export default async function call(method, args, options = {}) {
 	if (window.csrf_token && window.csrf_token !== '{{ csrf_token }}') {
 		headers['X-Frappe-CSRF-Token'] = window.csrf_token
 	}
-
-	console.log("CALL method:", method, "with args:", args)
 
 	let path = method.startsWith('/') ? method : `/api/method/${method}`
 	const res = await fetch(path, {
