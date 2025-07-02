@@ -1,6 +1,7 @@
-import { frappeProxy } from './frappeProxy.js'
-import { lucideIcons } from './lucideIcons.js'
 import { buildConfig } from './buildConfig.js'
+import { frappeProxy } from './frappeProxy.js'
+import { jinjaBootData } from './jinjaBootData.js'
+import { lucideIcons } from './lucideIcons.js'
 
 function frappeuiPlugin(options) {
 	let plugins = []
@@ -21,12 +22,12 @@ function frappeuiPlugin(options) {
 	//   if (mergedOptions.frappeTypes) {
 	//     plugins.push(frappeTypes(mergedOptions.frappeTypes))
 	//   }
-	//   if (mergedOptions.jinjaBootData) {
-	//     plugins.push(jinjaBootData(mergedOptions.jinjaBootData))
-	//   }
-	  if (mergedOptions.buildConfig) {
-	    plugins.push(buildConfig(mergedOptions.buildConfig))
-	  }
+	if (mergedOptions.jinjaBootData) {
+		plugins.push(jinjaBootData(mergedOptions.jinjaBootData))
+	}
+	if (mergedOptions.buildConfig) {
+		plugins.push(buildConfig(mergedOptions.buildConfig))
+	}
 	return plugins
 }
 

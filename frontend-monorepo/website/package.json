@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-	"build:prod": "vite build --mode production --base=/assets/lms/frontend/ && yarn copy-html-entry",
+	"build:prod": "vite build --mode production --base=/assets/lms/frontend",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
