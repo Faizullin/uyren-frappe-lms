@@ -16,12 +16,9 @@ package-lock.json
 pnpm-debug.log*
 
 # all build artefacts (workspace-level or inside packages/*)
-dist/
 build/
 .out/
-packages/**/dist/
 packages/**/build/
-website/dist/
 
 # TypeScript incremental cache
 *.tsbuildinfo
@@ -33,9 +30,7 @@ jest*.html
 *.lcov
 
 # local env & secrets
-.env
-.env.*            # .env.local, .env.test, etc.
-!.env.example     # keep a template
+.env.*
 
 ###############################################################################
 #  Vite / Vue / Storybook                                                     #

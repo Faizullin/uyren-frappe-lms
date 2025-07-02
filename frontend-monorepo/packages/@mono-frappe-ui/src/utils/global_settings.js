@@ -4,7 +4,7 @@ export const getGlobalSettings = () => {
 	const meta_settings = {
 		API_HOST: import.meta.env.VITE_APP_API_HOST,
 		SOCKET_HOST: import.meta.env.VITE_APP_SOCKET_HOST,
-		BASE_API_URL: "http://localhost:8000",
+		BASE_API_URL:  import.meta.env.VITE_APP_ABS_API_URL,
 	}
 	const keys = Object.keys(meta_settings)
 	for (const key of keys) {

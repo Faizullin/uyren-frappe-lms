@@ -25,9 +25,9 @@ export default defineConfig(({ mode }) => {
         //   },
         // },
         // Production build config for asset paths and HTML output
-        // buildConfig: {
-        //   indexHtmlPath: '../your_app/www/frontend.html',
-        // },
+        buildConfig: {
+          indexHtmlPath: '../lms/www/frontend.html',
+        },
       }),
       tailwindcss(),
     ],

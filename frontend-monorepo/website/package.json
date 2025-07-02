@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+	"build:prod": "vite build --mode production --base=/assets/lms/frontend/ && yarn copy-html-entry",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "copy-html-entry": "cp ../../lms/public/frontend/index.html ../../lms/www/lms.html"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^6.18.6",
