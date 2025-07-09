@@ -5,11 +5,13 @@ import App from './App.vue'
 import { createPinia } from 'pinia'
 // import dayjs from '@/utils/dayjs'
 import { createDialog } from '@/utils/dialogs.js'
+import {initializeLanguage} from '@/utils/languageUtils.js'
 import translationPlugin from './translation'
 import { usersStore } from './stores/user'
 import { initSocket } from './socket.js'
 import { FrappeUI, setConfig, frappeRequest, pageMetaPlugin, dayjs } from '@mono/mono-frappe-ui'
 
+initializeLanguage()
 const pinia = createPinia()
 const app = createApp(App)
 setConfig('resourceFetcher', frappeRequest)

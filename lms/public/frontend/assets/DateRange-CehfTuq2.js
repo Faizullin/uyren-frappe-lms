@@ -1,2 +1,0 @@
-import{c as s,o as r,b as n,d as o,s as t,aC as c,t as p,bo as i}from"./index-CgbsATbs.js";const l={class:"flex items-center text-ink-gray-7"},g={__name:"DateRange",props:{startDate:{type:String},endDate:{type:String}},setup(a){const e=a;return(d,_)=>(r(),s("div",l,[n(t(c),{class:"h-4 w-4 stroke-1.5 mr-2"}),o("span",null,p(t(i)(e.startDate,e.endDate)),1)]))}};export{g as _};
-//# sourceMappingURL=DateRange-CehfTuq2.js.map

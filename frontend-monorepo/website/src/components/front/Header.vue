@@ -32,7 +32,7 @@
       <div class="flex gap-2 items-center text-[16px] font-semibold text-[#1a1a1a] dark:text-white">
         <template v-for="(lang, index) in langs" :key="lang">
           <span class="cursor-pointer hover:underline" :class="{ 'text-[#f1511b] font-bold': selectedLang === lang }"
-            @click="setLanguage(lang)">
+            @click="handleLanguageChange(lang)">
             {{ lang }}
           </span>
           <span v-if="index !== langs.length - 1">|</span>
@@ -46,14 +46,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { useLanguage } from '@/composables/useLanguage'
 
-const langs = ['en', 'kz', 'ru']
-const selectedLang = ref(localStorage.getItem('lang') || 'en')
+const { currentLanguage, availableLanguages, changeLanguage, isCurrentLanguage } = useLanguage()
 
-function setLanguage(lang) {
-  if (lang === selectedLang.value) return
-  localStorage.setItem('lang', lang)
-  location.reload()
-}
+// Alias for template usage
+const langs = availableLanguages
+const selectedLang = currentLanguage
+const handleLanguageChange = changeLanguage
 </script>

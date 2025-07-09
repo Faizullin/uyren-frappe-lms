@@ -4,9 +4,9 @@
     <div class="flex flex-col overflow-hidden" :class="sidebarStore.isSidebarCollapsed ? 'items-center' : ''">
       <div href="/lms/home" class="flex items-center justify-start my-5 mx-[10px]">
         <a href="/lms/home">
-          <img src="/img/logo.svg" alt="UYREN.AI Logo" width="53.37" height="50 cursor-pointer" />
+          <img src="/img/logo.svg" alt="UYREN.AI Logo" width="53.37" height="50" class="cursor-pointer" />
         </a>
-        <a href="/lms/home" class="text-[30px] font-semibold text-[#191919] mt-2 dark:text-white">UYREN.AI</a>
+        <a v-if="!sidebarStore.isSidebarCollapsed" href="/lms/home" class="text-[30px] font-semibold text-[#191919] mt-2 dark:text-white ml-3">UYREN.AI</a>
       </div>
       <div class="border-b border-[#E4E4E4] mx-[10px] mb-4 border-[1.5px]"></div>
 

@@ -1,9 +1,13 @@
 import { createResource } from '@mono/mono-frappe-ui'
+import { getCurrentLanguage } from './utils/languageUtils'
 
 export default function translationPlugin(app) {
 	app.config.globalProperties.__ = translate
 	window.__ = translate
-	if (!window.translatedMessages) fetchTranslations()
+	if (!window.translatedMessages) {
+		const language = getCurrentLanguage()
+		fetchTranslations(language)
+	}
 }
 
 function translate(message) {
@@ -30,7 +34,7 @@ function translate(message) {
 
 function fetchTranslations(lang) {
 	createResource({
-		url: 'lms.lms.api.get_translations',
+		url: 'lms.lms.api.get_translations?lang=' + lang,
 		cache: 'translations',
 		auto: true,
 		transform: (data) => {

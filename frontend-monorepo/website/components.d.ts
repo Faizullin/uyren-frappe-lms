@@ -36,6 +36,7 @@ declare module 'vue' {
     ChildTable: typeof import('./src/components/Controls/ChildTable.vue')['default']
     Code: typeof import('./src/components/Controls/Code.vue')['default']
     CodeBlockComponent: typeof import('./src/components/MTextEditor/CodeBlockComponent.vue')['default']
+    CodeBlockRenderer: typeof import('./src/components/CodeBlockRenderer.vue')['default']
     CodeBlockWithSettingsView: typeof import('./src/components/MTextEditor/components/CodeBlockWithSettingsView.vue')['default']
     CodeEditor: typeof import('./src/components/Controls/CodeEditor.vue')['default']
     CollapseSidebar: typeof import('./src/components/Icons/CollapseSidebar.vue')['default']

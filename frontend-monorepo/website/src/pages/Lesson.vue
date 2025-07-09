@@ -149,7 +149,8 @@
             <div class="text-ink-gray-5 font-medium">
               {{ __('Instructor Notes') }}
             </div>
-            <div v-html="instructorContentHtml"
+            <div
+              ref="instructorContentRef"
               class="ProseMirror prose prose-table:table-fixed prose-td:p-2 prose-th:p-2 prose-td:border prose-th:border prose-td:border-outline-gray-2 prose-th:border-outline-gray-2 prose-td:relative prose-th:relative prose-th:bg-surface-gray-2 prose-sm max-w-none !whitespace-normal">
             </div>
           </div>
@@ -158,8 +159,8 @@
             <LessonContent :content="lesson.data.instructor_notes" />
           </div>
           <div v-if="contentHtml"
+            ref="mainContentRef"
             class="ProseMirror prose prose-table:table-fixed prose-td:p-2 prose-th:p-2 prose-td:border prose-th:border prose-td:border-outline-gray-2 prose-th:border-outline-gray-2 prose-td:relative prose-th:relative prose-th:bg-surface-gray-2 prose-sm max-w-none !whitespace-normal mt-8">
-            <div v-html="contentHtml"></div>
           </div>
           <div v-else
             class="ProseMirror prose prose-table:table-fixed prose-td:p-2 prose-th:p-2 prose-td:border prose-th:border prose-td:border-outline-gray-2 prose-th:border-outline-gray-2 prose-td:relative prose-th:relative prose-th:bg-surface-gray-2 prose-sm max-w-none !whitespace-normal mt-8">
@@ -228,6 +229,7 @@ import CertificationLinks from '@/components/CertificationLinks.vue'
 import CourseInstructors from '@/components/CourseInstructors.vue'
 import LessonContent from '@/components/LessonContent.vue'
 import ProgressBar from '@/components/ProgressBar.vue'
+import { useEnhancedContent } from '@/composables/useEnhancedContent'
 
 const user = inject('$user')
 const socket = inject('$socket')
@@ -245,6 +247,10 @@ const timer = ref(0)
 const { brand } = sessionStore()
 const sidebarStore = useSidebar()
 let timerInterval
+
+// Enhanced content setup
+const { instructorContentRef, watchContent, watchInstructorContent } = useEnhancedContent()
+const mainContentRef = ref(null)
 
 // Content conversion variables
 const convertedContent = ref('')
@@ -275,6 +281,10 @@ onMounted(() => {
       lessonProgress.value = data.progress
     }
   })
+
+  // Set up content watchers after component is mounted
+  watchContent(contentHtml, mainContentRef)
+  watchInstructorContent(instructorContentHtml, instructorContentRef)
 })
 
 const attachFullscreenEvent = () => {
